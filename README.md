@@ -12,7 +12,8 @@ This project was scaffolded with [zksync-cli](https://github.com/matter-labs/zks
 ## How to Use
 
 - `npm run compile`: Compiles contracts.
-- `npm run deploy`: Deploys using script `/deploy/deploy.ts`.
+- `npm run deploy`: Deploys the `Greeter` contract using the script in `/deploy/deploy.ts`.
+- `npm run deploy:paymaster`: Deploys the `GeneralPaymaster` contract using the script in `/deploy/deploy.ts`.
 - `npm run interact`: Interacts with the deployed contract using `/deploy/interact.ts`.
 - `npm run test`: Tests the contracts.
 
@@ -31,6 +32,9 @@ WALLET_PRIVATE_KEY=your_private_key_here...
 ### Network Support
 
 `hardhat.config.ts` comes with a list of networks to deploy and test contracts. Add more by adjusting the `networks` section in the `hardhat.config.ts`. To make a network the default, set the `defaultNetwork` to its name. You can also override the default using the `--network` option, like: `hardhat test --network dockerizedNode`.
+
+The config is currently set to connect to the `inMemoryNode`.
+To deploy to the `inMemoryNode`, start a local node with `zksync-cli dev start` or `era_test_node run`.
 
 ### Local Tests
 
