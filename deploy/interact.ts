@@ -5,11 +5,11 @@ import { Wallet } from "zksync-ethers";
 import { getPaymasterParams } from "zksync-ethers/build/paymaster-utils";
 import { DEFAULT_GAS_PER_PUBDATA_LIMIT } from "zksync-ethers/build/utils";
 
-// Address of the contract to interact with
+// Address of the contracts to interact with
 const CONTRACT_ADDRESS = "";
-if (!CONTRACT_ADDRESS)
-  throw "⛔️ Provide address of the contract to interact with!";
 const PAYMASTER_CONTRACT_ADDRESS = "";
+if (!CONTRACT_ADDRESS || !PAYMASTER_CONTRACT_ADDRESS)
+  throw "⛔️ Provide address of the contract to interact with!";
 
 // An example of a script to interact with the contract
 export default async function () {
